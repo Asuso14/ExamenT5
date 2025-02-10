@@ -38,5 +38,21 @@ public class KmSolidariosIESMutxamel {
         corredor1.setNumero_vueltas(15);//Definimos el numero de vueltas que ha dado Jose.
         iesmutxamel.calcularDonacion(corredor1);//Calculamos lo que tienen que pagar a Jose por sus vueltas.
 
+        //Aqui he hecho un ejemplo mío, con raul que corre msa que el viento.
+        Organizador iesmutxamel2 = new Organizador("II");
+
+        //Le definimos el nombre y el importe por vuelta, tambien los patrocinadores y lo inscribiremos. Despues vamos a imprimir su info.
+        Corredor corredor3 = new Corredor("Rauh",0.1);
+        corredor3.insertarPatrocinador("Nacho","Patri","Angel_finalBoss","Paco");
+        iesmutxamel2.inscribir_corredor(corredor3);
+        System.out.println(corredor3);
+
+        //Mostramos todos los corredores de iesmutxamel 2 , que solo esta raul.
+        iesmutxamel2.mostrarCorredores();
+
+        //Aqui hacemos el calculo de cuento le daran a raul por las vueltas, dinero para su beca mec.
+        corredor3.setNumero_vueltas(50);
+        iesmutxamel2.calcularDonacion(corredor3);
+
     }
 }
